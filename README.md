@@ -1,2 +1,36 @@
-# time-series-forecasting-tf
-Repositório para estudo e desenvolvimento de previsões de séries temporais usando TensorFlow, abordando tanto single-step (previsão de 1 hora à frente) quanto multi-step (previsão de 24 horas), com exemplos de Baseline, Linear, Denso, CNN, LSTM e modelo autoregressivo.
+# Time Series Forecasting com TensorFlow
+
+Este repositório contém um projeto de estudo para **previsão de séries temporais** usando TensorFlow. Nele, abordamos:
+
+- **Preprocessamento**: subamostragem de dados (de 10min para 1h), limpeza de valores anômalos, engenharia de atributos (vetores de vento, periodicidade diária e anual) e normalização.
+- **Criação de janelas** (`WindowGenerator`): organização dos dados em blocos (inputs e labels) respeitando a estrutura temporal.
+- **Modelos**:
+  1. **Single-step**: onde o objetivo é prever apenas 1 hora à frente.
+     - Baseline (retorna valor atual como previsão).
+     - Modelos (Linear, Dense, …).
+  2. **Multi-step** (24 horas): gerando um perfil de 24h no futuro.
+     - Baselines (Last e Repeat).
+     - Modelos single-shot (Linear, Dense, CNN, LSTM).
+     - Modelo autoregressivo (FeedBack).
+
+## Conteúdo
+
+1. `notebooks/`
+   - Contém o notebook principal (`Single_and_Multi_Step_Tutorial.ipynb` ou nome similar) com todo o pipeline:
+     - Leitura de dados e subamostragem.
+     - Eng. de atributos (vento em Wx/Wy, Day/Year sin/cos).
+     - Normalização e *split* em Treino/Val/Teste.
+     - Modelos single-step e multi-step, com comparações de métricas.
+2. `scripts/` (opcional)
+   - Caso haja scripts auxiliares para automação, pipeline MLflow, etc.
+3. `data/` (opcional)
+   - Geralmente excluído do versionamento (`.gitignore`), pois costuma conter arquivos grandes.
+4. `README.md`
+   - Explicações gerais do projeto, instruções de uso, referências.
+
+## Como Executar
+
+1. **Clonar o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/time-series-forecasting-tf.git
+   cd time-series-forecasting-tf
