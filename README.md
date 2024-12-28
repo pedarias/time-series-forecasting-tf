@@ -15,17 +15,13 @@ Este repositório contém um projeto de estudo para **previsão de séries tempo
 
 ## Conteúdo
 
-1. `notebooks/`
-   - Contém o notebook principal (`Single_and_Multi_Step_Tutorial.ipynb` ou nome similar) com todo o pipeline:
+1. `notebook`
+   - Contém o notebook principal (`tsf1.ipynb` ou nome similar) com todo o pipeline:
      - Leitura de dados e subamostragem.
      - Eng. de atributos (vento em Wx/Wy, Day/Year sin/cos).
      - Normalização e *split* em Treino/Val/Teste.
      - Modelos single-step e multi-step, com comparações de métricas.
-2. `scripts/` (opcional)
-   - Caso haja scripts auxiliares para automação, pipeline MLflow, etc.
-3. `data/` (opcional)
-   - Geralmente excluído do versionamento (`.gitignore`), pois costuma conter arquivos grandes.
-4. `README.md`
+2. `README.md`
    - Explicações gerais do projeto, instruções de uso, referências.
 
 ## Como Executar
