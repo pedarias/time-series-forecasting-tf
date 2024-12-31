@@ -61,6 +61,24 @@ Um modelo *multi-step* naturalmente pode prever diversas variáveis em cada um d
 
 ![Desempenho dos modelos Multi-output (single-step) e Multi-step](images/performance_metrics.png)
 
+# Conclusão
+1. **Single-step** (prever apenas o próximo ponto (hora seguinte)):
+   - Modelos como baseline, linear e denso podem ter desempenho razoável prevendo apenas 1 hora no futuro.
+
+2. **Single-step Multi-output**: Prever o próximo ponto, mas várias variáveis ao mesmo tempo.
+
+3. **Multi-step** (24h):
+   - Precisamos de mais complexidade ou estratégias (ex.: single-shot ou autoregressivo) para lidar com a evolução de um dia inteiro.
+   - Modelos mais complexos, como LSTM e Conv, têm um desempenho melhor, indicando que a capacidade de capturar dependências de longo prazo ou padrões locais é benéfica para previsões de múltiplos passos.
+
+4. **Comparação** mostra que, em muitos casos, os modelos básicos (linear, denso) já atingem bons resultados, e CNN/LSTM podem trazer ganhos marginais dependendo da natureza dos dados.
+
+## Possíveis Extensões;Próximos Passos
+- Explorar **horizontes diferentes** (ex.: 48h, 72h).
+- Incluir **MLflow** para rastrear experimentos.
+- Servir o modelo com **FastAPI** e **Streamlit**.
+- Ajustar hiperparâmetros.
+
 # Como Executar
 
 1. **Clonar o repositório**:
@@ -89,3 +107,15 @@ Navegue até o notebook desejado dentro da interface do Jupyter e execute as cé
 # Referência
 
 ![TensorFlow Tutorial](https://www.tensorflow.org/tutorials/structured_data/time_series)
+
+## 📫 Contato
+Para mais informações ou dúvidas, entre em contato através do GitHub Issues ou me envie um e-mail.
+##### Pedro Henrique Arias Oliveira:
+<p align="center"> 
+  <a href="https://www.linkedin.com/in/pedroarias92/" target="_blank">
+    <img align="center" src="https://logosmarcas.net/wp-content/uploads/2020/04/Linkedin-Logo.png" height="30" />
+  </a> 
+  <a href="mailto:pedro.oliveira@sistemafiep.org.br" target="_blank">
+    <img align="center" src="https://w7.pngwing.com/pngs/995/259/png-transparent-microsoft-outlook-logo-outlook-com-microsoft-outlook-email-microsoft-office-365-outlook-miscellaneous-blue-text.png" height="30" />
+  </a>
+</p>
