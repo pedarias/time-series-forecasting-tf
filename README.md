@@ -12,9 +12,9 @@ Exemplos:
 - **Dense** (MLP): Usa várias camadas densas para prever só o próximo valor.
 - **CNN** (Conv1D em sequência curta): Observa uma janela de entradas (por exemplo, 3 horas de histórico) e retorna a previsão de apenas 1 hora à frente.
 - **RNN**(LSTM ou GRU “single-step”): Processa várias horas de histórico, mas ao final retorna apenas 1 ponto de previsão para o próximo instante.
-![](images/rnn_lstm_singlestep.png)
+![LSTM Single-step model](images/rnn_lstm_singlestep.png)
 
-![](images/performance_singlestep.png)
+![Desempenho modelos Single-step](images/performance_singlestep.png)
 
 **Características**:
 
@@ -46,7 +46,7 @@ Diferentemente dos anteriores, um **multi-step model** faz previsão para vário
 
 - Observa-se uma janela de entrada (por exemplo, 24 horas) e se obtém **múltiplos passos** futuros (por exemplo, 24 horas à frente).
 - Útil em cenários em que se deseja planejamento de médio/longo prazo (previsões em mais de um passo).
-![](images/multistep_lstm_model.png)
+![LSTM Multi-step model](images/multistep_lstm_model.png)
 
 **Quando combinar “multi-output” e “multi-step”**
 
